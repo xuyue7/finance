@@ -10,6 +10,9 @@
 
 package com.finacne.common.base;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * @Auther: xuyue
  * @Date: 18-11-25 21:46
@@ -17,5 +20,5 @@ package com.finacne.common.base;
  * @ClassName:BaseController
  */
 public class BaseController {
-
+    private static final Logger log = LoggerFactory.getLogger(BaseController.class);
 }
