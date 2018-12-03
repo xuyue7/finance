@@ -9,6 +9,10 @@
  */
 package com.finacne.modules.test.service;
 
+import com.finacne.modules.test.entity.Chat;
+
+import java.util.List;
+
 /**
  * @Auther: xuyue
  * @Date: 18-11-25 21:40
@@ -16,4 +20,5 @@ package com.finacne.modules.test.service;
  * @ClassName:TestService
  */
 public interface TestService {
+    List<Chat> selectAll();
 }

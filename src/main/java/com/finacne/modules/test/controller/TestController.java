@@ -10,8 +10,23 @@
 
 package com.finacne.modules.test.controller;
 
+import com.finacne.modules.test.entity.Chat;
+import com.finacne.modules.test.entity.Student.Student;
+import com.finacne.modules.test.service.serviceimpl.TestServiceImpl;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
+import org.apache.ibatis.logging.Log;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @Auther: xuyue
@@ -21,8 +36,33 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 @RequestMapping(value = "/test")
+@Api(description = "122",value = "TestController",produces = "555")
 public class TestController {
+
+    @Autowired
+    private TestServiceImpl testServiceImpl;
+
+    @ApiOperation(value = "数据",notes = "查询摸个至",response = Chat.class)
+    @RequestMapping("index")
     public String printTset(){
         return "index";
+    }
+
+    @RequestMapping(value = "/dat")
+    @ResponseBody
+    @ApiOperation(value = "数据",notes = "查询摸个至",response = Chat.class)
+    public Map<Object,Object> printData(){
+        Map<Object,Object> map = new HashMap<>();
+        List<Chat> chatList = this.testServiceImpl.selectAll();
+        map.put("data",chatList);
+        return map;
+    }
+
+    @ApiOperation(value = "根据id查询学生信息", notes = "查询数据库中某个的学生信息")
+    @ApiImplicitParam(name = "id", value = "学生ID", paramType = "path", required = true, dataType = "Integer")
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public Student getStudent(@PathVariable int id) {
+        System.out.println("开始查询");
+        return null;
     }
 }
