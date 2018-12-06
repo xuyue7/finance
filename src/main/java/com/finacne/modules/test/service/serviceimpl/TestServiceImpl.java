@@ -13,12 +13,8 @@ package com.finacne.modules.test.service.serviceimpl;
 import com.finacne.modules.test.entity.Chat;
 import com.finacne.modules.test.mapper.ChatMapper;
 import com.finacne.modules.test.service.TestService;
-import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestMapping;
-import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 

@@ -1,7 +1,6 @@
 package com.finacne.modules.test.mapper;
 
 import com.finacne.modules.test.entity.Chat;
-import com.github.pagehelper.PageHelper;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
 

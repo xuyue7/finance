@@ -16,7 +16,6 @@ import com.finacne.modules.test.service.serviceimpl.TestServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
-import org.apache.ibatis.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -36,13 +35,12 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping(value = "/test")
-@Api(description = "122",value = "TestController",produces = "555")
+@Api(description = "122",value = "TestController",tags = "1徐月")
 public class TestController {
-
     @Autowired
     private TestServiceImpl testServiceImpl;
 
-    @ApiOperation(value = "数据",notes = "查询摸个至",response = Chat.class)
+    @ApiOperation(value = "数据",notes = "查询摸个至")
     @RequestMapping("index")
     public String printTset(){
         return "index";
@@ -50,7 +48,7 @@ public class TestController {
 
     @RequestMapping(value = "/dat")
     @ResponseBody
-    @ApiOperation(value = "数据",notes = "查询摸个至",response = Chat.class)
+    @ApiOperation(value = "数据",notes = "查询摸个至")
     public Map<Object,Object> printData(){
         Map<Object,Object> map = new HashMap<>();
         List<Chat> chatList = this.testServiceImpl.selectAll();
