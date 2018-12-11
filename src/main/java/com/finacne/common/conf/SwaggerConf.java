@@ -36,7 +36,7 @@ public class SwaggerConf {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.finacne.modules.test.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.finacne.modules.test.Controller"))
                 .paths(PathSelectors.any())
                 .build();
     }

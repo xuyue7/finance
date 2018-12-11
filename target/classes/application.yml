@@ -14,3 +14,12 @@ spring:
     expose-spring-macro-helpers: false
     suffix: .html
     template-loader-path: classpath:/webapp
+    jpa:
+      show-sql: true
+      hibernate:
+        ddl-auto: update
+  pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql

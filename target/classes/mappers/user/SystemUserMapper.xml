@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.finacne.modules.user.mapper.SystemUserMapper">
+  <resultMap id="BaseResultMap" type="com.finacne.modules.user.entity.SystemUser">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="user_uuid" jdbcType="BIGINT" property="userUuid" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="user_type" jdbcType="BIT" property="userType" />
+    <result column="user_head" jdbcType="VARCHAR" property="userHead" />
+    <result column="user_ente_uuid" jdbcType="BIGINT" property="userEnteUuid" />
+    <result column="user_status" jdbcType="BIT" property="userStatus" />
+    <result column="user_data_status" jdbcType="BIT" property="userDataStatus" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_uuid, user_name, user_type, user_head, user_ente_uuid, user_status, user_data_status, 
+    create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from system_user
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from system_user
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <update id="updateByPrimaryKeySelective" parameterType="com.finacne.modules.user.entity.SystemUser">
+    update system_user
+    <set>
+      <if test="userUuid != null">
+        user_uuid = #{userUuid,jdbcType=BIGINT},
+      </if>
+      <if test="userName != null">
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userType != null">
+        user_type = #{userType,jdbcType=BIT},
+      </if>
+      <if test="userHead != null">
+        user_head = #{userHead,jdbcType=VARCHAR},
+      </if>
+      <if test="userEnteUuid != null">
+        user_ente_uuid = #{userEnteUuid,jdbcType=BIGINT},
+      </if>
+      <if test="userStatus != null">
+        user_status = #{userStatus,jdbcType=BIT},
+      </if>
+      <if test="userDataStatus != null">
+        user_data_status = #{userDataStatus,jdbcType=BIT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.finacne.modules.user.entity.SystemUser">
+    update system_user
+    set user_uuid = #{userUuid,jdbcType=BIGINT},
+      user_name = #{userName,jdbcType=VARCHAR},
+      user_type = #{userType,jdbcType=BIT},
+      user_head = #{userHead,jdbcType=VARCHAR},
+      user_ente_uuid = #{userEnteUuid,jdbcType=BIGINT},
+      user_status = #{userStatus,jdbcType=BIT},
+      user_data_status = #{userDataStatus,jdbcType=BIT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <resultMap id="BaseResultMap" type="com.finacne.modules.user.entity.SystemUser">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="user_uuid" jdbcType="BIGINT" property="userUuid" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="user_type" jdbcType="BIT" property="userType" />
+    <result column="user_pwd" jdbcType="VARCHAR" property="userPwd" />
+    <result column="user_status" jdbcType="BIT" property="userStatus" />
+    <result column="user_data_status" jdbcType="BIT" property="userDataStatus" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_uuid, user_name, user_type, user_head, user_ente_uuid, user_status, user_data_status,
+    create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from system_user
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from system_user
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <update id="updateByPrimaryKeySelective" parameterType="com.finacne.modules.user.entity.SystemUser">
+    update system_user
+    <set>
+      <if test="userUuid != null">
+        user_uuid = #{userUuid,jdbcType=BIGINT},
+      </if>
+      <if test="userName != null">
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userType != null">
+        user_type = #{userType,jdbcType=BIT},
+      </if>
+      <if test="userHead != null">
+        user_head = #{userHead,jdbcType=VARCHAR},
+      </if>
+      <if test="userEnteUuid != null">
+        user_ente_uuid = #{userEnteUuid,jdbcType=BIGINT},
+      </if>
+      <if test="userStatus != null">
+        user_status = #{userStatus,jdbcType=BIT},
+      </if>
+      <if test="userDataStatus != null">
+        user_data_status = #{userDataStatus,jdbcType=BIT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.finacne.modules.user.entity.SystemUser">
+    update system_user
+    set user_uuid = #{userUuid,jdbcType=BIGINT},
+      user_name = #{userName,jdbcType=VARCHAR},
+      user_type = #{userType,jdbcType=BIT},
+      user_head = #{userHead,jdbcType=VARCHAR},
+      user_ente_uuid = #{userEnteUuid,jdbcType=BIGINT},
+      user_status = #{userStatus,jdbcType=BIT},
+      user_data_status = #{userDataStatus,jdbcType=BIT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectOneByUserName" resultMap="BaseResultMap">
+    select * from system_user where user_name = #{name}
+  </select>
+</mapper>
