@@ -2,21 +2,12 @@
   "code": 1,
   "message": "成功",
   "data": [
-    {
-      "title": "主题",
-      "pageURL": "theme",
-      "name": "主题",
-      "icon": "fa-television",
-      "openType": 1,
-      "extend": false,
-      "childs": null,
-      "id": 1
-    },
+
     {
       "title": "打赏作者",
       "pageURL": "/home/reward",
       "name": "打赏作者",
-      "icon": "fa-qrcode",
+      "icon": "fa-address-book-o",
       "openType": 1,
       "extend": false,
       "childs": null,

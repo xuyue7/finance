@@ -57,6 +57,8 @@ public class ShiroConf {
         map.put("/lib/**", "anon");//js
         map.put("/js/**", "anon");//js
         map.put("/statcic/**", "anon");//js
+        map.put("/login", "anon");//js
+        map.put("/login/view", "anon");//js
         map.put("/**","authc");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(map);
         return shiroFilterFactoryBean;
