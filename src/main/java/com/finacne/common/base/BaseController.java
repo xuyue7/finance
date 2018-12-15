@@ -20,5 +20,5 @@ import org.slf4j.LoggerFactory;
  * @ClassName:BaseController
  */
 public class BaseController {
-    private static final Logger log = LoggerFactory.getLogger(BaseController.class);
+    public static final Logger log = LoggerFactory.getLogger(BaseController.class);
 }
