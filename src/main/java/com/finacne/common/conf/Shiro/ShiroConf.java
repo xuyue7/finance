@@ -40,11 +40,11 @@ public class ShiroConf {
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         shiroFilterFactoryBean.setSecurityManager(securityManager);
         //登录页
-        shiroFilterFactoryBean.setLoginUrl("/login/view");
+        shiroFilterFactoryBean.setLoginUrl("/user/login/view");
         //登录成功页面
-        shiroFilterFactoryBean.setSuccessUrl("/login/index");
+        shiroFilterFactoryBean.setSuccessUrl("/user/login/index");
         //首页
-        shiroFilterFactoryBean.setSuccessUrl("src/index");
+        shiroFilterFactoryBean.setSuccessUrl("/user/home/index");
         //错误页面，认证不通过跳转
         shiroFilterFactoryBean.setUnauthorizedUrl("/login/error");
         Map<String,String> map = new HashMap<String, String>();
@@ -56,10 +56,11 @@ public class ShiroConf {
         map.put("/json/**", "anon");//js
         map.put("/lib/**", "anon");//js
         map.put("/js/**", "anon");//js
-        map.put("/statcic/**", "anon");//js
-        map.put("/login", "anon");//js
-        map.put("/login/view", "anon");//js
-        map.put("/**","authc");
+        map.put("/src", "anon");//js
+        map.put("/src/**", "anon");//js
+        map.put("/user/login", "anon");//js
+        map.put("/user/login/view", "anon");//js
+        map.put("/user","authc");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(map);
         return shiroFilterFactoryBean;
     }

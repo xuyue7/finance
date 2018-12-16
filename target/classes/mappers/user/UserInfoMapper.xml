@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.finacne.modules.user.mapper.UserInfoMapper">
+    <resultMap id="BaseResultMap" type="com.finacne.modules.user.entity.UserInfo">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="uinf_uuid" jdbcType="BIGINT" property="uinfUuid"/>
+        <result column="uinf_name" jdbcType="VARCHAR" property="uinfName"/>
+        <result column="uinf_sex" jdbcType="BIT" property="uinfSex"/>
+        <result column="uinf_birth" jdbcType="DATE" property="uinfBirth"/>
+        <result column="uinf_addr" jdbcType="VARCHAR" property="uinfAddr"/>
+        <result column="data_status" jdbcType="BIT" property="dataStatus"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+    </resultMap>
+    <select id="search" resultMap="BaseResultMap">
+        SELECT * FROM user_info
+        <where>
+            <if test="uinfName != null and uinfName != ''">
+                AND user_info.uinf_name LIKE CONCAT('%','#{uinfName}','%')
+            </if>
+            <if test="uinfSex != null">
+                AND user_info.uinf_sex = #{uinfSex}
+            </if>
+            <if test="dataStatus != null">
+                AND user_info.data_status = #{dataStatus}
+            </if>
+            <if test="uinfAddr != null and uinfAddr != ''">
+                AND user_info.uinf_addr LIKE CONCAT('%','#{uinfAddr}','%')
+            </if>
+        </where>
+    </select>
+</mapper>

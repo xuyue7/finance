@@ -1,15 +1,12 @@
 package com.finacne.common.conf.Shiro;
 
-import com.finacne.modules.user.Entity.Permission;
-import com.finacne.modules.user.Entity.Role;
-import com.finacne.modules.user.Entity.SystemUser;
-import com.finacne.modules.user.Service.UserService;
+import com.finacne.modules.user.entity.SystemUser;
+import com.finacne.modules.user.service.UserService;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.SimpleAuthenticationInfo;
 import org.apache.shiro.authz.AuthorizationInfo;
-import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;

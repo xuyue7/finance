@@ -16,7 +16,7 @@
 
         <!-- 数据库链接URL、用户名、密码 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://47.98.52.36:3306/finance?characterEncoding=utf8"
+                        connectionURL="jdbc:mysql://47.98.52.36:3306/finance_v1?characterEncoding=utf8"
                         userId="root" password="root">
         </jdbcConnection>
 
@@ -56,25 +56,25 @@
         enableSelectByExample:Select多条语句中加入where条件查询，默认为true开启
         selectByExampleQueryId:Select单个对象语句中加入where条件查询，默认为true开启
         -->
-        <table tableName="system_user" domainObjectName="SystemUser"
+        <table tableName="user_info" domainObjectName="UserInfo"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false" enableInsert="false" />
-        <table tableName="role" domainObjectName="Role"
-               enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false" enableInsert="false" />
-        <table tableName="permission" domainObjectName="Permission"
-               enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false" enableInsert="false" />
-        <table tableName="user_role" domainObjectName="UserRole"
-               enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false" enableInsert="false" />
-        <table tableName="role_premission" domainObjectName="RolePremission"
-               enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false" enableInsert="false" />
+        <!--<table tableName="role" domainObjectName="Role"-->
+               <!--enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false" enableInsert="false" />-->
+        <!--<table tableName="permission" domainObjectName="Permission"-->
+               <!--enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false" enableInsert="false" />-->
+        <!--<table tableName="user_role" domainObjectName="UserRole"-->
+               <!--enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false" enableInsert="false" />-->
+        <!--<table tableName="role_premission" domainObjectName="RolePremission"-->
+               <!--enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false" enableInsert="false" />-->
     </context>
 </generatorConfiguration>
