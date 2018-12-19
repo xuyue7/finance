@@ -14,7 +14,6 @@ import org.springframework.stereotype.Service;
  * @describe:
  * @date 2018/12/6
  */
-@Service("userService")
 public interface UserService {
     /**
      * 查询用户

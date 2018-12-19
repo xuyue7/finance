@@ -21,7 +21,7 @@ import java.util.List;
  * @describe:
  * @date 2018/12/6
  */
-@Service
+@Service("userService")
 public class UserServiceImpl implements UserService {
     @Autowired
     private SystemUserMapper systemUserMapper;

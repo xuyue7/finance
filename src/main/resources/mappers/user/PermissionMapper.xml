@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.finacne.modules.user.mapper.PermissionMapper">
-  <resultMap id="BaseResultMap" type="com.finacne.modules.user.entity.Permission">
+  <resultMap id="BaseResultMap1" type="com.finacne.modules.user.entity.Permission">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="permission_id" jdbcType="BIGINT" property="permissionId" />
     <result column="permission_title" jdbcType="VARCHAR" property="permissionTitle" />
@@ -9,98 +9,4 @@
     <result column="permission_describe" jdbcType="VARCHAR" property="permissionDescribe" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
   </resultMap>
-  <sql id="Base_Column_List">
-    id, permission_id, permission_title, permission_code, permission_describe, create_time
-  </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from permission
-    where id = #{id,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from permission
-    where id = #{id,jdbcType=INTEGER}
-  </delete>
-  <update id="updateByPrimaryKeySelective" parameterType="com.finacne.modules.user.entity.Permission">
-    update permission
-    <set>
-      <if test="permissionId != null">
-        permission_id = #{permissionId,jdbcType=BIGINT},
-      </if>
-      <if test="permissionTitle != null">
-        permission_title = #{permissionTitle,jdbcType=VARCHAR},
-      </if>
-      <if test="permissionCode != null">
-        permission_code = #{permissionCode,jdbcType=VARCHAR},
-      </if>
-      <if test="permissionDescribe != null">
-        permission_describe = #{permissionDescribe,jdbcType=VARCHAR},
-      </if>
-      <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP},
-      </if>
-    </set>
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.finacne.modules.user.entity.Permission">
-    update permission
-    set permission_id = #{permissionId,jdbcType=BIGINT},
-      permission_title = #{permissionTitle,jdbcType=VARCHAR},
-      permission_code = #{permissionCode,jdbcType=VARCHAR},
-      permission_describe = #{permissionDescribe,jdbcType=VARCHAR},
-      create_time = #{createTime,jdbcType=TIMESTAMP}
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <resultMap id="BaseResultMap" type="com.finacne.modules.user.entity.Permission">
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="permission_id" jdbcType="BIGINT" property="permissionId" />
-    <result column="permission_title" jdbcType="VARCHAR" property="permissionTitle" />
-    <result column="permission_code" jdbcType="VARCHAR" property="permissionCode" />
-    <result column="permission_describe" jdbcType="VARCHAR" property="permissionDescribe" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    id, permission_id, permission_title, permission_code, permission_describe, create_time
-  </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from permission
-    where id = #{id,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from permission
-    where id = #{id,jdbcType=INTEGER}
-  </delete>
-  <update id="updateByPrimaryKeySelective" parameterType="com.finacne.modules.user.entity.Permission">
-    update permission
-    <set>
-      <if test="permissionId != null">
-        permission_id = #{permissionId,jdbcType=BIGINT},
-      </if>
-      <if test="permissionTitle != null">
-        permission_title = #{permissionTitle,jdbcType=VARCHAR},
-      </if>
-      <if test="permissionCode != null">
-        permission_code = #{permissionCode,jdbcType=VARCHAR},
-      </if>
-      <if test="permissionDescribe != null">
-        permission_describe = #{permissionDescribe,jdbcType=VARCHAR},
-      </if>
-      <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP},
-      </if>
-    </set>
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.finacne.modules.user.entity.Permission">
-    update permission
-    set permission_id = #{permissionId,jdbcType=BIGINT},
-      permission_title = #{permissionTitle,jdbcType=VARCHAR},
-      permission_code = #{permissionCode,jdbcType=VARCHAR},
-      permission_describe = #{permissionDescribe,jdbcType=VARCHAR},
-      create_time = #{createTime,jdbcType=TIMESTAMP}
-    where id = #{id,jdbcType=INTEGER}
-  </update>
 </mapper>

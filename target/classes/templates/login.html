@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta charset="UTF-8" />
+		<title>财务系统，记录点滴,寻找美好</title>
+		<link rel="stylesheet" href="${base.contextPath}/css/d/bootstrap.min.css" type="text/css">
+		<link rel="stylesheet" href="${base.contextPath}/css/d/loginstyle.css" type="text/css">
+		<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="${base.contextPath}/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+		<!--动态背景-->
+		<script src="${base.contextPath}/js/jquery.gradientify.min.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-offset-3 col-md-6">
+						<div class="form-horizontal">
+							<span class="heading">系统登录</span>
+							<div class="form-group">
+								<input type="text" v-model="username" class="form-control" placeholder="请输入用户名" />
+							</div>
+							<div class="form-group">
+								<input type="password" v-model="pass_word" class="form-control" id="password" placeholder="请输入密码" />
+							</div>
+							<div class="form-group">
+								<li class="li4">
+									<input class="submit" type="submit" id="btnSubmit" value="登录" @click="login">
+								</li>
+								<li class="li3">
+									<a class="visitor" href="windows/views/index.html">游客身份进入</a>
+								</li>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			new Vue({
+				el: '#app',
+				created() {
+					$(document).ready(function() {
+						$("body").gradientify({
+							gradients: [{
+									start: [49, 76, 172],
+									stop: [242, 159, 191]
+								},
+								{
+									start: [255, 103, 69],
+									stop: [240, 154, 241]
+								},
+								{
+									start: [33, 229, 241],
+									stop: [235, 236, 117]
+								}
+							]
+						});
+					});
+				},
+				data: {
+					username: '',
+					pass_word: ''
+				},
+				methods: {
+					
+					login: function() {
+						console.log(this.username, this.pass_word)
+						axios.post('${base.contextPath}/user/login', {
+							params:{
+								username: this.username,
+								pwd: this.pass_word
+								}
+							})
+							.then(function(response) {
+								console.log(response);
+								if(response.status == 200){
+									alert("成功");
+								}
+							})
+							.catch(function(error) {
+								console.log(error);
+							});
+					}
+				}
+			})
+		</script>
+	</body>
+
+</html>

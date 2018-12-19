@@ -1,8 +1,10 @@
 package com.finacne.modules.user.mapper;
 
 import com.finacne.modules.user.entity.Permission;
+import org.apache.ibatis.annotations.Mapper;
 
-public interface PermissionMapper {
+@Mapper
+public interface PermissionMapper extends tk.mybatis.mapper.common.Mapper<Permission> {
     int deleteByPrimaryKey(Integer id);
 
     Permission selectByPrimaryKey(Integer id);

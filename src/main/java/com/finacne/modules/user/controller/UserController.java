@@ -36,8 +36,7 @@ public class UserController extends BaseController {
     //post登录
     @ApiOperation(value = "登录数据验证", notes = "")
     @RequestMapping(value = "/login", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
-    @ResponseBody
-    public Response login(@RequestBody @Valid Request<LoginParams> request) {
+    public String login(@RequestBody @Valid Request<LoginParams> request) {
         //添加用户认证信息
         LoginParams params = request.getParams();
         Subject subject = SecurityUtils.getSubject();
@@ -48,13 +47,13 @@ public class UserController extends BaseController {
             log.info("开始验证");
             // 判断当前用户是否登录
             if (subject.isAuthenticated() == true) {
-                return Response.ResponseOK("你已经登录", "");
+               return "/windows/index";
             }
         } catch (AuthenticationException e) {
             e.printStackTrace();
-            return Response.ResponseBAD("登录失败", "");
+            return "/login";
         }
-        return Response.ResponseOK("你已成功登录", "");
+        return "/windows/index";
     }
 
     @ApiOperation(value = "用户数据", notes = "", tags = "用户数据")
@@ -70,6 +69,17 @@ public class UserController extends BaseController {
         return result;
     }
 
+    @ApiOperation(value = "用户登录页面", notes = "", tags = "用户登录页面")
+    @RequestMapping(value = "/login/view")
+    public String loginView() {
+        return "/login";
+    }
+
+    @ApiOperation(value = "用户登录成功页面", notes = "", tags = "用户登录页面")
+    @RequestMapping(value = "/login/index")
+    public String loginSucessView() {
+        return "windows/views/index";
+    }
 }
 
 

@@ -1,96 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.finacne.modules.user.mapper.UserRoleMapper">
-  <resultMap id="BaseResultMap" type="com.finacne.modules.user.entity.UserRole">
+  <resultMap id="BaseResultMap1" type="com.finacne.modules.user.entity.UserRole">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="user_role_id" jdbcType="BIGINT" property="userRoleId" />
     <result column="user_uuid" jdbcType="BIGINT" property="userUuid" />
     <result column="role_id" jdbcType="BIGINT" property="roleId" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
   </resultMap>
-  <sql id="Base_Column_List">
-    id, user_role_id, user_uuid, role_id, create_time
-  </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from user_role
-    where id = #{id,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from user_role
-    where id = #{id,jdbcType=INTEGER}
-  </delete>
-  <update id="updateByPrimaryKeySelective" parameterType="com.finacne.modules.user.entity.UserRole">
-    update user_role
-    <set>
-      <if test="userRoleId != null">
-        user_role_id = #{userRoleId,jdbcType=BIGINT},
-      </if>
-      <if test="userUuid != null">
-        user_uuid = #{userUuid,jdbcType=BIGINT},
-      </if>
-      <if test="roleId != null">
-        role_id = #{roleId,jdbcType=BIGINT},
-      </if>
-      <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP},
-      </if>
-    </set>
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.finacne.modules.user.entity.UserRole">
-    update user_role
-    set user_role_id = #{userRoleId,jdbcType=BIGINT},
-      user_uuid = #{userUuid,jdbcType=BIGINT},
-      role_id = #{roleId,jdbcType=BIGINT},
-      create_time = #{createTime,jdbcType=TIMESTAMP}
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <resultMap id="BaseResultMap" type="com.finacne.modules.user.entity.UserRole">
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="user_role_id" jdbcType="BIGINT" property="userRoleId" />
-    <result column="user_uuid" jdbcType="BIGINT" property="userUuid" />
-    <result column="role_id" jdbcType="BIGINT" property="roleId" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    id, user_role_id, user_uuid, role_id, create_time
-  </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from user_role
-    where id = #{id,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from user_role
-    where id = #{id,jdbcType=INTEGER}
-  </delete>
-  <update id="updateByPrimaryKeySelective" parameterType="com.finacne.modules.user.entity.UserRole">
-    update user_role
-    <set>
-      <if test="userRoleId != null">
-        user_role_id = #{userRoleId,jdbcType=BIGINT},
-      </if>
-      <if test="userUuid != null">
-        user_uuid = #{userUuid,jdbcType=BIGINT},
-      </if>
-      <if test="roleId != null">
-        role_id = #{roleId,jdbcType=BIGINT},
-      </if>
-      <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP},
-      </if>
-    </set>
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.finacne.modules.user.entity.UserRole">
-    update user_role
-    set user_role_id = #{userRoleId,jdbcType=BIGINT},
-      user_uuid = #{userUuid,jdbcType=BIGINT},
-      role_id = #{roleId,jdbcType=BIGINT},
-      create_time = #{createTime,jdbcType=TIMESTAMP}
-    where id = #{id,jdbcType=INTEGER}
-  </update>
+
 </mapper>

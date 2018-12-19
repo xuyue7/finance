@@ -1,96 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.finacne.modules.user.mapper.RolePremissionMapper">
-  <resultMap id="BaseResultMap" type="com.finacne.modules.user.entity.RolePremission">
+  <resultMap id="BaseResultMap1" type="com.finacne.modules.user.entity.RolePremission">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="role_prem_id" jdbcType="BIGINT" property="rolePremId" />
     <result column="role_id" jdbcType="BIGINT" property="roleId" />
     <result column="prem_id" jdbcType="BIGINT" property="premId" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
   </resultMap>
-  <sql id="Base_Column_List">
-    id, role_prem_id, role_id, prem_id, create_time
-  </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from role_premission
-    where id = #{id,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from role_premission
-    where id = #{id,jdbcType=INTEGER}
-  </delete>
-  <update id="updateByPrimaryKeySelective" parameterType="com.finacne.modules.user.entity.RolePremission">
-    update role_premission
-    <set>
-      <if test="rolePremId != null">
-        role_prem_id = #{rolePremId,jdbcType=BIGINT},
-      </if>
-      <if test="roleId != null">
-        role_id = #{roleId,jdbcType=BIGINT},
-      </if>
-      <if test="premId != null">
-        prem_id = #{premId,jdbcType=BIGINT},
-      </if>
-      <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP},
-      </if>
-    </set>
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.finacne.modules.user.entity.RolePremission">
-    update role_premission
-    set role_prem_id = #{rolePremId,jdbcType=BIGINT},
-      role_id = #{roleId,jdbcType=BIGINT},
-      prem_id = #{premId,jdbcType=BIGINT},
-      create_time = #{createTime,jdbcType=TIMESTAMP}
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <resultMap id="BaseResultMap" type="com.finacne.modules.user.entity.RolePremission">
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="role_prem_id" jdbcType="BIGINT" property="rolePremId" />
-    <result column="role_id" jdbcType="BIGINT" property="roleId" />
-    <result column="prem_id" jdbcType="BIGINT" property="premId" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    id, role_prem_id, role_id, prem_id, create_time
-  </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from role_premission
-    where id = #{id,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from role_premission
-    where id = #{id,jdbcType=INTEGER}
-  </delete>
-  <update id="updateByPrimaryKeySelective" parameterType="com.finacne.modules.user.entity.RolePremission">
-    update role_premission
-    <set>
-      <if test="rolePremId != null">
-        role_prem_id = #{rolePremId,jdbcType=BIGINT},
-      </if>
-      <if test="roleId != null">
-        role_id = #{roleId,jdbcType=BIGINT},
-      </if>
-      <if test="premId != null">
-        prem_id = #{premId,jdbcType=BIGINT},
-      </if>
-      <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP},
-      </if>
-    </set>
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.finacne.modules.user.entity.RolePremission">
-    update role_premission
-    set role_prem_id = #{rolePremId,jdbcType=BIGINT},
-      role_id = #{roleId,jdbcType=BIGINT},
-      prem_id = #{premId,jdbcType=BIGINT},
-      create_time = #{createTime,jdbcType=TIMESTAMP}
-    where id = #{id,jdbcType=INTEGER}
-  </update>
 </mapper>

@@ -16,16 +16,6 @@ public class Role {
 
     private Integer roleDescribe;
 
-    private List<Permission> permList;
-
-    public List<Permission> getPermList() {
-        return permList;
-    }
-
-    public void setPermList(List<Permission> permList) {
-        this.permList = permList;
-    }
-
     public Integer getId() {
         return id;
     }
