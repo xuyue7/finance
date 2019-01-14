@@ -47,7 +47,7 @@ public class UserController extends BaseController {
             log.info("开始验证");
             // 判断当前用户是否登录
             if (subject.isAuthenticated() == true) {
-               return "/windows/index";
+                return "/windows/index";
             }
         } catch (AuthenticationException e) {
             e.printStackTrace();
@@ -57,7 +57,7 @@ public class UserController extends BaseController {
     }
 
     @ApiOperation(value = "用户数据", notes = "", tags = "用户数据")
-    @RequestMapping(value = "/data", method = RequestMethod.POST,produces = "application/json;charset=UTF-8")
+    @RequestMapping(value = "/data", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
     @ResponseBody
     public Map<String, Object> userData(Request<SearchUInfParams> request) {
         PageInfo<UserInfo> pageInfo = this.userService.findUserInfo(request);
@@ -78,8 +78,9 @@ public class UserController extends BaseController {
     @ApiOperation(value = "用户登录成功页面", notes = "", tags = "用户登录页面")
     @RequestMapping(value = "/login/index")
     public String loginSucessView() {
-        return "windows/views/index";
+        return "/views/index";
     }
+
 }
 
 

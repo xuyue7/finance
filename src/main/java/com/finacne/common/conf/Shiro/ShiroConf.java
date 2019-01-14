@@ -53,9 +53,9 @@ public class ShiroConf {
         //对所有用户认证
         map.put("/css", "anon");//css
         map.put("/images", "anon");//img
-        map.put("/windows", "anon");//js
+        map.put("/windows", "anon");//windows
         map.put("/js", "anon");//js
-        map.put("/layuiadmin", "anon");//js
+        map.put("/layuiadmin", "anon");//layuiadmin
         map.put("/user","authc");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(map);
         return shiroFilterFactoryBean;
