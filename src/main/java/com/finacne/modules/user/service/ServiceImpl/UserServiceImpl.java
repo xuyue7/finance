@@ -57,4 +57,16 @@ public class UserServiceImpl implements UserService {
         List<UserInfo> uinfList = this.userInfoMapper.selectAll();
         return new PageInfo<>(uinfList);
     }
+
+    /**
+     * 查询所有用户信息
+     *
+     * @return
+     */
+    @Override
+    public List<UserInfo> selectAllUserInfo() {
+        UserInfo userInfo = new UserInfo();
+        userInfo.setDataStatus(0);
+        return this.userInfoMapper.select(userInfo);
+    }
 }

@@ -7,6 +7,8 @@ import com.finacne.modules.user.entity.request.SearchUInfParams;
 import com.github.pagehelper.PageInfo;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author xuyue
  * @package com.finacne.modules.user.service
@@ -17,6 +19,7 @@ import org.springframework.stereotype.Service;
 public interface UserService {
     /**
      * 查询用户
+     *
      * @param name
      * @return
      */
@@ -24,8 +27,16 @@ public interface UserService {
 
     /**
      * 查询用户进行分页
+     *
      * @param request
      * @return
      */
     PageInfo<UserInfo> findUserInfo(Request<SearchUInfParams> request);
+
+    /**
+     * 查询所有用户信息
+     *
+     * @return
+     */
+    List<UserInfo> selectAllUserInfo();
 }

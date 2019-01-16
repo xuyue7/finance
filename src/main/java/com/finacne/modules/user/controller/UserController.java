@@ -28,7 +28,7 @@ import java.util.Map;
 
 @Api(description = "登录检查", value = "UserController", tags = "用户页面")
 @Controller
-@RequestMapping(value = "/user", produces = "application/json;charset=UTF-8")
+@RequestMapping(value = "/user", produces = "application/json;charset=UTF-8",method = RequestMethod.POST)
 public class UserController extends BaseController {
     @Autowired
     private UserService userService;

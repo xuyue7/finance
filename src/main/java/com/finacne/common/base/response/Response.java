@@ -1,5 +1,8 @@
 package com.finacne.common.base.response;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Des:
  * ClassName: Response
@@ -8,20 +11,33 @@ package com.finacne.common.base.response;
  * Time: 13:08
  */
 public class Response {
+
+    private Integer code;
     private String msg;
+    private Integer count;
+    private Object data;
 
-    private Integer status;
+    private static Map<String, Object> map;
 
-    private String token;
-
-    public Response(String msg, Integer status, String token) {
-        this.msg = msg;
-        this.status = status;
-        this.token = token;
+    public Response(Integer count, Object data) {
+        this.count = count;
+        this.data = data;
     }
 
-    public Response() {
+    public static Map<String, Object> Layui(Integer count, Object data) {
+        return map;
+    }
 
+    public static Map<String, Object> OK(Integer count, Object data) {
+        return map;
+    }
+
+    public Integer getCode() {
+        return code;
+    }
+
+    public void setCode(Integer code) {
+        this.code = code;
     }
 
     public String getMsg() {
@@ -32,28 +48,27 @@ public class Response {
         this.msg = msg;
     }
 
-    public Integer getStatus() {
-        return status;
+    public Integer getCount() {
+        return count;
     }
 
-    public void setStatus(Integer status) {
-        this.status = status;
+    public void setCount(Integer count) {
+        this.count = count;
     }
 
-    public String getToken() {
-        return token;
+    public Object getData() {
+        return data;
     }
 
-    public void setToken(String token) {
-        this.token = token;
+    public void setData(Object data) {
+        this.data = data;
     }
 
-    public static Response ResponseOK(String msg, String token){
-        return new Response(msg,HttpStatus.OK,token);
+    public Map<String, Object> getMap() {
+        return map;
     }
 
-    public static Response ResponseBAD(String msg, String token){
-        return new Response(msg,HttpStatus.BAD,token);
+    public void setMap(Map<String, Object> map) {
+        this.map = map;
     }
-
 }
