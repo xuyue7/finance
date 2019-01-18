@@ -40,11 +40,11 @@ public class ShiroConf {
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         shiroFilterFactoryBean.setSecurityManager(securityManager);
         //登录页
-        shiroFilterFactoryBean.setLoginUrl("/user/login/view");
+        shiroFilterFactoryBean.setLoginUrl("/employee/login/view");
         //登录成功页面
-        shiroFilterFactoryBean.setSuccessUrl("/user/login/index");
+        shiroFilterFactoryBean.setSuccessUrl("/employee/login/index");
         //首页
-        shiroFilterFactoryBean.setSuccessUrl("/user/login/view");
+        shiroFilterFactoryBean.setSuccessUrl("/employee/login/view");
         //错误页面，认证不通过跳转
         shiroFilterFactoryBean.setUnauthorizedUrl("/login/error");
         Map<String,String> map = new HashMap<String, String>();

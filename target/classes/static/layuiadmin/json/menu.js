@@ -114,21 +114,21 @@
     ,"title": "模板"
     ,"icon": "layui-icon-template"
     ,"list": [{
-      "name": "user"
+      "name": "employee"
       ,"title": "用户相关"
       ,"spread": true
       ,"list": [{
         "name": "reg"
         ,"title": "注册"
-        ,"jump": "user/reg"
+        ,"jump": "employee/reg"
       },{
         "name": "login"
         ,"title": "登入"
-        ,"jump": "user/login"
+        ,"jump": "employee/login"
       },{
         "name": "forget"
         ,"title": "忘记密码"
-        ,"jump": "user/forget"
+        ,"jump": "employee/forget"
       }]
     }, {
       "name": "tips"
@@ -176,11 +176,11 @@
       ,"title": "通讯系统"
     }]
   }, {
-    "name": "user"
+    "name": "employee"
     ,"title": "用户"
-    ,"icon": "layui-icon-user"
+    ,"icon": "layui-icon-employee"
     ,"list": [{
-      "name": "user"
+      "name": "employee"
       ,"title": "用户"
       ,"spread": true
       ,"list": [{

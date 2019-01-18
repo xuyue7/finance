@@ -164,11 +164,11 @@ layui.use(['layim', 'flow'], function(){
             //将好友追加到主面板
             parent.layui.layim.addList({
               type: 'friend'
-              ,avatar: user.avatar //好友头像
-              ,username: user.username //好友昵称
+              ,avatar: employee.avatar //好友头像
+              ,username: employee.username //好友昵称
               ,groupid: group //所在的分组id
               ,id: uid //好友ID
-              ,sign: user.sign //好友签名
+              ,sign: employee.sign //好友签名
             });
             parent.layer.close(index);
             othis.parent().html('已同意');

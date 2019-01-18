@@ -23,7 +23,7 @@ public class WebSocketConf implements WebSocketMessageBrokerConfigurer {
         registry.enableSimpleBroker("/topic");
         //前缀
         registry.setApplicationDestinationPrefixes("/app");
-         //点对点使用的订阅前缀（客户端订阅路径上会体现出来），不设置的话，默认也是/user/
-         registry.setUserDestinationPrefix("/user/");
+        //点对点使用的订阅前缀（客户端订阅路径上会体现出来），不设置的话，默认也是/employee/
+        registry.setUserDestinationPrefix("/employee/");
     }
 }

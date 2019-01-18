@@ -5,17 +5,31 @@ import java.util.Date;
 public class SystemUser {
     private Long id;
 
-    private Long userUuid;
+    private Long suseUuid;
 
-    private String userName;
+    private Long suseMallUuid;
 
-    private Integer userType;
+    private Long suseDepaUuid;
 
-    private String userPwd;
+    private String suseUserName;
 
-    private Integer userStatus;
+    private String suseRealName;
 
-    private Integer userDataStatus;
+    private String suseNikeName;
+
+    private String susePassword;
+
+    private String suseOnlineTag;
+
+    private String suseClientSalt;
+
+    private String suseHead;
+
+    private Integer suseSex;
+
+    private Date suseBirthday;
+
+    private String susePhone;
 
     private Date createTime;
 
@@ -29,52 +43,108 @@ public class SystemUser {
         this.id = id;
     }
 
-    public String getUserPwd() {
-        return userPwd;
+    public Long getSuseUuid() {
+        return suseUuid;
     }
 
-    public void setUserPwd(String userPwd) {
-        this.userPwd = userPwd;
+    public void setSuseUuid(Long suseUuid) {
+        this.suseUuid = suseUuid;
     }
 
-    public Long getUserUuid() {
-        return userUuid;
+    public Long getSuseMallUuid() {
+        return suseMallUuid;
     }
 
-    public void setUserUuid(Long userUuid) {
-        this.userUuid = userUuid;
+    public void setSuseMallUuid(Long suseMallUuid) {
+        this.suseMallUuid = suseMallUuid;
     }
 
-    public String getUserName() {
-        return userName;
+    public Long getSuseDepaUuid() {
+        return suseDepaUuid;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName == null ? null : userName.trim();
+    public void setSuseDepaUuid(Long suseDepaUuid) {
+        this.suseDepaUuid = suseDepaUuid;
     }
 
-    public Integer getUserType() {
-        return userType;
+    public String getSuseUserName() {
+        return suseUserName;
     }
 
-    public void setUserType(Integer userType) {
-        this.userType = userType;
+    public void setSuseUserName(String suseUserName) {
+        this.suseUserName = suseUserName == null ? null : suseUserName.trim();
     }
 
-    public Integer getUserStatus() {
-        return userStatus;
+    public String getSuseRealName() {
+        return suseRealName;
     }
 
-    public void setUserStatus(Integer userStatus) {
-        this.userStatus = userStatus;
+    public void setSuseRealName(String suseRealName) {
+        this.suseRealName = suseRealName == null ? null : suseRealName.trim();
     }
 
-    public Integer getUserDataStatus() {
-        return userDataStatus;
+    public String getSuseNikeName() {
+        return suseNikeName;
     }
 
-    public void setUserDataStatus(Integer userDataStatus) {
-        this.userDataStatus = userDataStatus;
+    public void setSuseNikeName(String suseNikeName) {
+        this.suseNikeName = suseNikeName == null ? null : suseNikeName.trim();
+    }
+
+    public String getSusePassword() {
+        return susePassword;
+    }
+
+    public void setSusePassword(String susePassword) {
+        this.susePassword = susePassword == null ? null : susePassword.trim();
+    }
+
+    public String getSuseOnlineTag() {
+        return suseOnlineTag;
+    }
+
+    public void setSuseOnlineTag(String suseOnlineTag) {
+        this.suseOnlineTag = suseOnlineTag == null ? null : suseOnlineTag.trim();
+    }
+
+    public String getSuseClientSalt() {
+        return suseClientSalt;
+    }
+
+    public void setSuseClientSalt(String suseClientSalt) {
+        this.suseClientSalt = suseClientSalt == null ? null : suseClientSalt.trim();
+    }
+
+    public String getSuseHead() {
+        return suseHead;
+    }
+
+    public void setSuseHead(String suseHead) {
+        this.suseHead = suseHead == null ? null : suseHead.trim();
+    }
+
+    public Integer getSuseSex() {
+        return suseSex;
+    }
+
+    public void setSuseSex(Integer suseSex) {
+        this.suseSex = suseSex;
+    }
+
+    public Date getSuseBirthday() {
+        return suseBirthday;
+    }
+
+    public void setSuseBirthday(Date suseBirthday) {
+        this.suseBirthday = suseBirthday;
+    }
+
+    public String getSusePhone() {
+        return susePhone;
+    }
+
+    public void setSusePhone(String susePhone) {
+        this.susePhone = susePhone == null ? null : susePhone.trim();
     }
 
     public Date getCreateTime() {

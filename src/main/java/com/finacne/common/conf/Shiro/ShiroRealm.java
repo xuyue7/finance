@@ -33,10 +33,10 @@ public class ShiroRealm extends AuthorizingRealm {
 //        //获取登录用户名
 //        String name= (String) principalCollection.getPrimaryPrincipal();
 //        //查询用户名称
-//        SystemUser user = this.userService.findByName(name);
+//        SystemUser employee = this.userService.findByName(name);
 //        //添加角色和权限
 //        SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
-//        for (Role role:user.getRoleList()) {
+//        for (Role role:employee.getRoleList()) {
 //            //添加角色
 //            simpleAuthorizationInfo.addRole(role.getRoleCode());
 //            for (Permission permission:role.getPermList()) {
@@ -64,9 +64,9 @@ public class ShiroRealm extends AuthorizingRealm {
             //这里返回后会报出对应异常
             return null;
         } else {
-            ByteSource salt = ByteSource.Util.bytes(user.getUserName());
+            ByteSource salt = ByteSource.Util.bytes(user.getSuseRealName());
             //这里验证authenticationToken和simpleAuthenticationInfo的信息
-            SimpleAuthenticationInfo simpleAuthenticationInfo = new SimpleAuthenticationInfo(name, user.getUserPwd(),salt, getName());
+            SimpleAuthenticationInfo simpleAuthenticationInfo = new SimpleAuthenticationInfo(name, user.getSusePassword(),salt, getName());
             return simpleAuthenticationInfo;
         }
     }

@@ -1,17 +1,15 @@
 package com.finacne.modules.user.service;
 
 import com.finacne.common.base.request.Request;
+import com.finacne.modules.user.entity.Response.UserDataParams;
 import com.finacne.modules.user.entity.SystemUser;
 import com.finacne.modules.user.entity.UserInfo;
 import com.finacne.modules.user.entity.request.SearchUInfParams;
 import com.github.pagehelper.PageInfo;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 /**
  * @author xuyue
- * @package com.finacne.modules.user.service
+ * @package com.finacne.modules.employee.service
  * @name UserService
  * @describe:
  * @date 2018/12/6
@@ -34,9 +32,18 @@ public interface UserService {
     PageInfo<UserInfo> findUserInfo(Request<SearchUInfParams> request);
 
     /**
-     * 查询所有用户信息
+     * 查询员工数据并分页
      *
+     * @param request
      * @return
      */
-    List<UserInfo> selectAllUserInfo();
+    PageInfo<UserInfo> selectAllUserInfo(Request<UserDataParams> request);
+
+    /**
+     * 查询系统用户并进行分页
+     *
+     * @param params
+     * @return
+     */
+    PageInfo<SystemUser> selectAllAdminInfo(Request<UserDataParams> params);
 }

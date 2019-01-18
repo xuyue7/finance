@@ -43,11 +43,11 @@ layui.define('form', function(exports){
   
   //发送短信验证码
   admin.sendAuthCode({
-    elem: '#LAY-user-getsmscode'
-    ,elemPhone: '#LAY-user-login-cellphone'
-    ,elemVercode: '#LAY-user-login-vercode'
+    elem: '#LAY-employee-getsmscode'
+    ,elemPhone: '#LAY-employee-login-cellphone'
+    ,elemVercode: '#LAY-employee-login-vercode'
     ,ajax: {
-      url: layui.setter.base + 'json/user/sms.js' //实际使用请改成服务端真实接口
+      url: layui.setter.base + 'json/employee/sms.js' //实际使用请改成服务端真实接口
     }
   });
   
@@ -55,11 +55,11 @@ layui.define('form', function(exports){
   
   
   //更换图形验证码
-  $body.on('click', '#LAY-user-get-vercode', function(){
+  $body.on('click', '#LAY-employee-get-vercode', function(){
     var othis = $(this);
-    this.src = 'https://www.oschina.net/action/user/captcha?t='+ new Date().getTime()
+    this.src = 'https://www.oschina.net/action/employee/captcha?t='+ new Date().getTime()
   });
   
   //对外暴露的接口
-  exports('user', {});
+  exports('employee', {});
 });

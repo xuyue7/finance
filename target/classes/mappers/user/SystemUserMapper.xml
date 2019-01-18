@@ -3,12 +3,20 @@
 <mapper namespace="com.finacne.modules.user.mapper.SystemUserMapper">
   <resultMap id="BaseResultMap1" type="com.finacne.modules.user.entity.SystemUser">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="user_uuid" jdbcType="BIGINT" property="userUuid" />
-    <result column="user_name" jdbcType="VARCHAR" property="userName" />
-    <result column="user_type" jdbcType="BIT" property="userType" />
-    <result column="user_pwd" jdbcType="VARCHAR" property="userPwd" />
-    <result column="user_status" jdbcType="BIT" property="userStatus" />
-    <result column="user_data_status" jdbcType="BIT" property="userDataStatus" />
+    <result column="suse_uuid" jdbcType="BIGINT" property="suseUuid" />
+    <result column="suse_ente_uuid" jdbcType="BIGINT" property="suseEnteUuid" />
+    <result column="suse_mall_uuid" jdbcType="BIGINT" property="suseMallUuid" />
+    <result column="suse_depa_uuid" jdbcType="BIGINT" property="suseDepaUuid" />
+    <result column="suse_user_name" jdbcType="VARCHAR" property="suseUserName" />
+    <result column="suse_real_name" jdbcType="VARCHAR" property="suseRealName" />
+    <result column="suse_nike_name" jdbcType="VARCHAR" property="suseNikeName" />
+    <result column="suse_password" jdbcType="VARCHAR" property="susePassword" />
+    <result column="suse_online_tag" jdbcType="VARCHAR" property="suseOnlineTag" />
+    <result column="suse_client_salt" jdbcType="VARCHAR" property="suseClientSalt" />
+    <result column="suse_head" jdbcType="VARCHAR" property="suseHead" />
+    <result column="suse_sex" jdbcType="BIT" property="suseSex" />
+    <result column="suse_birthday" jdbcType="DATE" property="suseBirthday" />
+    <result column="suse_phone" jdbcType="VARCHAR" property="susePhone" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
   </resultMap>

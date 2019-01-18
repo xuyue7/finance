@@ -1,6 +1,7 @@
 package com.finacne.modules.user.service.ServiceImpl;
 
 import com.finacne.common.base.request.Request;
+import com.finacne.modules.user.entity.Response.UserDataParams;
 import com.finacne.modules.user.entity.SystemUser;
 import com.finacne.modules.user.entity.UserInfo;
 import com.finacne.modules.user.entity.request.SearchUInfParams;
@@ -16,7 +17,7 @@ import java.util.List;
 
 /**
  * @author xuyue
- * @package com.finacne.modules.user.service.ServiceImpl
+ * @package com.finacne.modules.employee.service.ServiceImpl
  * @name UserServiceImpl
  * @describe:
  * @date 2018/12/6
@@ -37,9 +38,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public SystemUser findByName(String name) {
         SystemUser systemUser = new SystemUser();
-        systemUser.setUserName(name);
-        systemUser.setUserStatus(0);
-        systemUser.setUserDataStatus(0);
+        systemUser.setSuseRealName(name);
         return this.systemUserMapper.selectOne(systemUser);
     }
 
@@ -61,12 +60,26 @@ public class UserServiceImpl implements UserService {
     /**
      * 查询所有用户信息
      *
+     * @param params
      * @return
      */
     @Override
-    public List<UserInfo> selectAllUserInfo() {
+    public PageInfo<UserInfo> selectAllUserInfo(Request<UserDataParams> params) {
         UserInfo userInfo = new UserInfo();
         userInfo.setDataStatus(0);
-        return this.userInfoMapper.select(userInfo);
+        PageHelper.startPage(params.getPageNum(), params.getPageSize());
+        return new PageInfo<UserInfo>(this.userInfoMapper.select(userInfo));
+    }
+
+    /**
+     * 查询系统用户并进行分页
+     *
+     * @param params
+     * @return
+     */
+    @Override
+    public PageInfo<SystemUser> selectAllAdminInfo(Request<UserDataParams> params) {
+        PageHelper.startPage(params.getPageNum(),params.getPageNum());
+        return new PageInfo<>(this.systemUserMapper.selectAll());
     }
 }

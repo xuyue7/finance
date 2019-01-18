@@ -61,7 +61,7 @@
 
         table.render({
             elem: '#test-table-operate',
-            url: '${base.contextPath}/user/data/admin/info',
+            url: '${base.contextPath}/user/data/info',
             page: true //开启分页
             ,
             limit: 10,
@@ -78,52 +78,44 @@
                     fixed: 'left',
 
                 }, {
-                    field: 'suseUuid',
+                    field: 'uinfUuid',
                     title: 'ID',
                     sort: true,
                     fixed: 'left'
                 }, {
                     align: 'center',
-                    field: 'suseMallUuid',
-                    title: '用户所属店铺'
+                    field: 'uinfName',
+                    title: '用户名'
                 }, {
                     align: 'center',
-                    field: 'suseUserName',
-                    title: '用户名字',
+                    field: 'uinfSex',
+                    title: '性别',
                     sort: true
                 }, {
                     align: 'center',
-                    field: 'suseRealName',
-                    title: '用户真实名字'
-                }, {
-                    align: 'center',
-                    field: 'suseNikeName',
-                    title: '用户昵称'
-                },  {
-                    align: 'center',
-                    field: 'suseSex',
-                    title: '用户性别'
-                }, {
-                    align: 'center',
-                    field: 'suseBirthday',
-                    title: '用户生日'
-                }, {
-                    align: 'center',
-                    field: 'susePhone',
-                    title: '用户电话'
-                },{
-                    align: 'center',
-                    field: 'suseDepaUuid',
-                    title: '用户部门',
+                    field: 'uinfBirth',
+                    title: '生日',
                     sort: true
-                },{
+                }, {
                     align: 'center',
-                    field: 'updateTime',
+                    field: 'uinfAddr',
+                    title: '城市'
+                }, {
+                    align: 'center',
+                    field: 'sign',
+                    title: '签名'
+                }, {
+                    align: 'center',
+                    field: 'classify',
+                    title: '身份'
+                }, {
+                    align: 'center',
+                    field: 'createTime',
                     title: '创建时间'
                 }, {
                     align: 'center',
                     field: 'dataStatus',
-                    title: '是否禁用',
+                    title: '状态',
                     sort: true
                 }, {
                     width: 200,

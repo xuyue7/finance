@@ -14,12 +14,12 @@ public class Response {
 
     private Integer code;
     private String msg;
-    private Integer count;
+    private Long count;
     private Object data;
 
     private static Map<String, Object> map;
 
-    public Response(Integer count, Object data) {
+    public Response(Long count, Object data) {
         this.count = count;
         this.data = data;
     }
@@ -28,7 +28,7 @@ public class Response {
         return map;
     }
 
-    public static Map<String, Object> OK(Integer count, Object data) {
+    public static Map<String, Object> OK(Long count, Object data) {
         return map;
     }
 
@@ -48,11 +48,11 @@ public class Response {
         this.msg = msg;
     }
 
-    public Integer getCount() {
+    public Long getCount() {
         return count;
     }
 
-    public void setCount(Integer count) {
+    public void setCount(Long count) {
         this.count = count;
     }
 

@@ -16,7 +16,7 @@
 
         <!-- 数据库链接URL、用户名、密码 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://47.98.52.36:3306/finance_v1?characterEncoding=utf8"
+                        connectionURL="jdbc:mysql://47.98.52.36:3306/version_1?characterEncoding=utf8"
                         userId="root" password="root">
         </jdbcConnection>
 
@@ -28,7 +28,7 @@
 
         <!-- 生成Pojo包名和位置 -->
         <javaModelGenerator targetPackage="com.finacne.modules.user.entity"
-                            targetProject="E:\workspace\doing\src\main\java">
+                            targetProject="D:\personalwork\finance\src\main\java">
             <!-- enableSubPackages:是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="true" />
             <!-- 清理前后的空格 -->
@@ -37,13 +37,13 @@
 
         <!-- 生成Mapper映射XML文件位置 -->
         <sqlMapGenerator targetPackage="mappers.user"
-                         targetProject="E:\workspace\doing\src\main\resources">
+                         targetProject="D:\personalwork\finance\src\main\resources">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
 
         <!-- 生成Mapper接口文件位置 -->
         <javaClientGenerator type="XMLMAPPER"
-                             targetPackage="com.finacne.modules.user.mapper" targetProject="E:\workspace\doing\src\main\java">
+                             targetPackage="com.finacne.modules.user.mapper" targetProject="D:\personalwork\finance\src\main\java">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
 
@@ -56,7 +56,7 @@
         enableSelectByExample:Select多条语句中加入where条件查询，默认为true开启
         selectByExampleQueryId:Select单个对象语句中加入where条件查询，默认为true开启
         -->
-        <table tableName="user_info" domainObjectName="UserInfo"
+        <table tableName="system_user" domainObjectName="SystemUser"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false" enableInsert="false" />

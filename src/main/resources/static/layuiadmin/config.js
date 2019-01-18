@@ -3,7 +3,7 @@
  @Author：贤心
  @Site：http://www.layui.com/admin/
  */
- 
+
 layui.define(['laytpl', 'layer', 'element', 'util'], function(exports){
   exports('setter', {
     container: 'LAY_app' //容器ID
@@ -21,7 +21,7 @@ layui.define(['laytpl', 'layer', 'element', 'util'], function(exports){
     ,request: {
       tokenName: false //自动携带 token 的字段名（如：access_token）。可设置 false 不携带。
     }
-    
+
     //自定义响应字段
     ,response: {
       statusName: 'code' //数据状态的字段名称
@@ -32,13 +32,13 @@ layui.define(['laytpl', 'layer', 'element', 'util'], function(exports){
       ,msgName: 'msg' //状态信息的字段名称
       ,dataName: 'data' //数据详情的字段名称
     }
-    
+
     //扩展的第三方模块
     ,extend: [
       'echarts', //echarts 核心包
       'echartsTheme' //echarts 主题
     ]
-    
+
     //主题配置
     ,theme: {
       //配色方案，如果用户未设置主题，第一个将作为默认

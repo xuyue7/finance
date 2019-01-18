@@ -7,11 +7,7 @@
  * describe: Shall not be reproduced without consent
  * /
  */
-package com.finacne.modules.test.service;
-
-import com.finacne.modules.test.entity.Chat;
-
-import java.util.List;
+package com.finacne.modules.proof.service;
 
 /**
  * @Auther: xuyue
@@ -19,6 +15,6 @@ import java.util.List;
  * @Description:这是测试service层
  * @ClassName:TestService
  */
-public interface TestService {
-    List<Chat> selectAll();
+public interface ProofService {
+
 }
