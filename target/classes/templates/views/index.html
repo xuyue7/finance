@@ -117,12 +117,12 @@
 
 							<dl class="layui-nav-child">
 								<dd data-name="button">
-									<a lay-href="component/button/index.html">新增凭证</a>
+									<a lay-href="${base.contextPath}/proof/add/view">新增凭证</a>
 								</dd>
 							</dl>
 							<dl class="layui-nav-child">
 								<dd data-name="button">
-									<a lay-href="component/button/index2.html">查看凭证</a>
+									<a lay-href="${base.contextPath}/proof/see/view">查看凭证</a>
 								</dd>
 							</dl>
 						</li>
@@ -199,6 +199,23 @@
 								</dd>
 								<dd>
 									<a lay-href="template/tips/error.html">资产类别设置</a>
+								</dd>
+							</dl>
+						</li>
+						<li data-name="user" class="layui-nav-item">
+							<a href="javascript:;" lay-tips="资产" lay-direction="2">
+								<i class="layui-icon layui-icon-user"></i>
+								<cite>商品</cite>
+							</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a lay-href="template/tips/error.html">商品管理</a>
+								</dd>
+								<dd>
+									<a lay-href="template/tips/error.html">类型管理</a>
+								</dd>
+								<dd>
+									<a lay-href="template/tips/error.html">商品汇总</a>
 								</dd>
 							</dl>
 						</li>
@@ -412,30 +429,6 @@
 				</div>
 			</div>
 
-			<!-- 页面标签 -->
-			<div class="layadmin-pagetabs" id="LAY_app_tabs">
-				<div class="layui-icon layadmin-tabs-control layui-icon-prev" layadmin-event="leftPage"></div>
-				<div class="layui-icon layadmin-tabs-control layui-icon-next" layadmin-event="rightPage"></div>
-				<div class="layui-icon layadmin-tabs-control layui-icon-down">
-					<ul class="layui-nav layadmin-tabs-select" lay-filter="layadmin-pagetabs-nav">
-						<li class="layui-nav-item" lay-unselect>
-							<a href="javascript:;"></a>
-							<dl class="layui-nav-child layui-anim-fadein">
-								<dd layadmin-event="closeThisTabs">
-									<a href="javascript:;">关闭当前标签页</a>
-								</dd>
-								<dd layadmin-event="closeOtherTabs">
-									<a href="javascript:;">关闭其它标签页</a>
-								</dd>
-								<dd layadmin-event="closeAllTabs">
-									<a href="javascript:;">关闭全部标签页</a>
-								</dd>
-							</dl>
-						</li>
-					</ul>
-				</div>
-				</ul>
-			</div>
 			<!-- 页面标签 -->
 			<div class="layadmin-pagetabs" id="LAY_app_tabs">
 				<div class="layui-icon layadmin-tabs-control layui-icon-prev" layadmin-event="leftPage"></div>

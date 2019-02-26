@@ -1,28 +1,11 @@
 package com.finacne.modules.user.controller;
 
 import com.finacne.common.base.BaseController;
-import com.finacne.common.base.request.LoginParams;
-import com.finacne.common.base.request.Request;
-import com.finacne.modules.user.entity.UserInfo;
-import com.finacne.modules.user.entity.request.SearchUInfParams;
-import com.finacne.modules.user.service.UserService;
-import com.github.pagehelper.PageInfo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.AuthenticationException;
-import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.subject.Subject;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import javax.validation.Valid;
-import java.util.HashMap;
-import java.util.Map;
 
 @Api(description = "登录检查", value = "UserController", tags = "用户页面")
 @Controller
@@ -35,19 +18,19 @@ public class UserController extends BaseController {
         return "/login";
     }
 
-    @ApiOperation(value = "用户登录成功页面", notes = "", tags = "用户登录页面")
+    @ApiOperation(value = "用户登录成功页面", notes = "", tags = "用户登录成功页面")
     @RequestMapping(value = "/login/index", method = RequestMethod.GET)
     public String loginSucessView() {
         return "views/index";
     }
 
-    @ApiOperation(value = "用户登录成功页面", notes = "", tags = "用户登录页面")
+    @ApiOperation(value = "管理员页面", notes = "", tags = "管理管理员页面")
     @RequestMapping(value = "/admin/view", method = RequestMethod.GET)
     public String adminView() {
         return "views/user/administrators/list";
     }
 
-    @ApiOperation(value = "用户登录成功页面", notes = "", tags = "用户登录页面")
+    @ApiOperation(value = "员工页面", notes = "", tags = "员工管理页面")
     @RequestMapping(value = "/employee/view", method = RequestMethod.GET)
     public String userView() {
         return "views/user/employee/list";
